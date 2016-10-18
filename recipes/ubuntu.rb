@@ -3,49 +3,37 @@
 execute 'update packages' do
   command 'apt-get update'
 end
-
-package 'Install packages for pixinsight' do
-  package_name 'libgstreamer-plugins-base0.10-dev'
+%w{
+libgstreamer-plugins-base0.10-dev
+libsm6
+libxi6
+libxrender1
+libxrandr2
+libfontconfig1
+libssl-dev
+libgl1-mesa-glx
+libpulse0
+libxcomposite1
+libqt5core5a
+libqt5gui5
+libqt5multimedia5
+libqt5multimediawidgets5
+libqt5positioning5
+libqt5printsupport5
+libssh2-1
+libqt5qml5
+libqt5quick5
+libqt5sensors5
+libqt5sql5
+libqt5webkit5
+libqt5x11extras5
+libqt5xml5
+libmozjs-24-dev
+}.each do |pkg|
+  package 'Install packages #{pkg} for pixinsight' do
+    package_name pkg
+  end
 end
 
-# Missing packqges:
-# ldd PixInsight | grep found | sort
-#
-#   13  apt-get install libQt
-#   14  sudo apt-get install libQta
-#   15  sudo apt-get install libqt5core 
-#   16  sudo apt-get install libqt5core5a
-#   19  sudo apt-get install libqt5network5 libcrypto9
-#   20  sudo apt-get install libqt5network5 libcrypto++9
-#   21  sudo apt-get install libqt5network5 libcrypto++9v5
-#   23  sudo apt-get install libmozjs-24
-#   25* sudo apt-get install 
-   # 27  sudo apt-get install libqt5multimedia5
-   # 29  sudo apt-get install libqt
-   # 30  sudo apt-get install libqt5multimediaquick-p5 
-   # 33  sudo apt-get install libqt5opengl5 
-   # 34  sudo apt-get install libqt5multimediawidgets5
-   # 36  sudo apt-get install libssh2-1 libssl1.0.0
-   # 38  sudo apt-get install libcrypto1.0.0
-   # 39  sudo apt-get install libqt5webkit5
-   # 41  sudo apt-get install libqt5sensor5
-   # 42  sudo apt-get install libqt5sensors5
-   # 43  sudo apt-get install libqt5webchannel5
-   # 44  sudo apt-get install libqt5x11extras5
-   # 47  sudo apt-get install 
-   # 49  sudo apt-get install libqt5xml5
-   # 50  sudo apt-get install libqt5positioning5
-   # 51  sudo apt-get install libqt5webchannel5
-   # 53  sudo apt-get install libmozjs-24-0
-   # 54  sudo apt-get install libmozjs-24-0v5
-   # 56* sudo apt-get install libmozjs-24-0v5-de
-   # 57  sudo apt-get install libmozjs-24-bin
-   # 59  sudo apt-get install libmozjs-24-dev
-   # 61  sudo apt-get install libsslcommon2
-   # 63  sudo apt-get install libcrypto++dev
-   # 64  sudo apt-get install libcrypto++-dev
-   # 66  sudo apt-get install libxrandr
-   # 67  sudo apt-get install libxrandr2
-   # 69  sudo apt-get install liblcms2-2
-   # 72  sudo apt-get install libssl-dev
-   # 74  sudo apt-get install libssl-dev
+
+

@@ -4,4 +4,5 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-include "ubuntu"
+include_recipe '::ubuntu'
+#include_recipe '::install_pi'
