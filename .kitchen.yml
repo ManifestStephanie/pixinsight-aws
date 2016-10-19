@@ -2,11 +2,11 @@
 driver:
   name: ec2
   region: us-west-2
-  instance_type: t2.small # m4.2xlarge
-  key_name: MyKeyPair
+  instance_type: t2.small # c4.4xlarge
+  key_name: MyKeyPair2
  
 transport: 
-  ssh_key:  ~/.ssh/MyKeyPair.pem 
+  ssh_key:  ~/.ssh/MyKeyPair2.pem 
 
 provisioner:
   name: chef_solo
