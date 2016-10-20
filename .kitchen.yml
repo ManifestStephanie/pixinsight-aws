@@ -4,6 +4,7 @@ driver:
   region: us-west-2
   instance_type: t2.small # c4.4xlarge
   key_name: MyKeyPair2
+  iam_profile_name: pixinsight
  
 transport: 
   ssh_key:  ~/.ssh/MyKeyPair2.pem 

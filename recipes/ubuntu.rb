@@ -29,6 +29,7 @@ libqt5webkit5
 libqt5x11extras5
 libqt5xml5
 libmozjs-24-dev
+expect
 }.each do |pkg|
   package 'Install packages #{pkg} for pixinsight' do
     package_name pkg

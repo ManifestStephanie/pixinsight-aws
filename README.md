@@ -14,6 +14,8 @@ export PATH=/opt/chefdk/embedded/bin:$PATH
 
 1. Clone this repo
 
+1. run ```berks install``` to download and install cookbooks
+
 1. Install aws command line tools
   See (Insert link to aws page)
   * `curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"`
