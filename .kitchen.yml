@@ -2,7 +2,8 @@
 driver:
   name: ec2
   region: us-west-2
-  instance_type: t2.small # c4.4xlarge
+  availability_zone: b
+  instance_type: c4.4xlarge
   key_name: MyKeyPair2
   iam_profile_name: pixinsight
  

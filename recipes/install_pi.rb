@@ -11,8 +11,8 @@ end
 execute "Unpack pixinsight" do
   command "tar xzf /home/ubuntu/#{pixinsight_tgz}"
   cwd "/home/ubuntu"
+  user 'ubuntu'
 end
-
 
 expect_script 'Install Pixinsight' do
   cwd '/home/ubuntu'
@@ -28,4 +28,17 @@ expect_script 'Install Pixinsight' do
   EOH
   user 'root'
   group 'root'
+end
+
+execute "chown" do
+  command "chown -R ubuntu /opt/PixInsight/"
+  user 'root'
+end
+
+cookbook_file '/home/ubuntu/pixinsight-license' do
+  source 'pixinsight-license'
+  owner 'ubuntu'
+  group 'ubuntu'
+  mode '0644'
+  action :create
 end

@@ -32,4 +32,5 @@ export PATH=/opt/chefdk/embedded/bin:$PATH
     may be smarter way.
  
 1. Set up keypair
-export AWS_SSH_KEY_ID=MyKeyPair
+Add this line to .config file
+export AWS_SSH_KEY_ID=MyKeyPair2
